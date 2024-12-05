@@ -42,7 +42,8 @@ if ingredients_list:
     #st.text(ingredients_list)
 
     ingredients_string = ''
-
+    time_to_insert = ''
+    
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen
 
