@@ -32,6 +32,8 @@ session = cnx.session()
 my_dataframe = session.table("SMOOTHIES.PUBLIC.FRUIT_OPTIONS").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
+time_to_insert = ''
+
 ingredients_list = st.multiselect (
     'Choose up to 5 ingredients:'
     , my_dataframe
@@ -42,7 +44,7 @@ if ingredients_list:
     #st.text(ingredients_list)
 
     ingredients_string = ''
-    time_to_insert = ''
+    
     
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen
